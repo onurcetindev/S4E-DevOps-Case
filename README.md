@@ -120,3 +120,20 @@ class Job(Task):
         self.score = self.param.get('max_score', 5)
 ```
 
+### Repository name : onurcetin/s4e-intern-devops
+
+### Interface : 
+![image](https://github.com/user-attachments/assets/47ad5b56-4aa1-42df-9ce8-7151f5616a0f)
+
+### Kubernetes : 
+
+![kubernete](https://github.com/user-attachments/assets/829b24d7-e223-4ecd-b915-e1576de077e3)
+
+### Heml deploy : 
+
+![helm deploy](https://github.com/user-attachments/assets/2bead732-c9f9-4504-87b1-74ba77dad292)
+
+
+
+
+
