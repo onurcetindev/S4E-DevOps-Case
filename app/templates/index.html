@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Kod Üretici</title>
+    <style>
+        /* Basit loading spinner CSS */
+        .loading {
+            display: none;
+            text-align: center;
+        }
+    </style>
+    <script>
+        function showLoading() {
+            document.getElementById("loading").style.display = "block";
+        }
+        function hideLoading() {
+            document.getElementById("loading").style.display = "none";
+        }
+    </script>
+</head>
+<body>
+<h1>Yapay Zekâ Destekli Kod Üretici</h1>
+<form method="post" onsubmit="showLoading()">
+    <label for="prompt">Prompt girin:</label><br>
+    <textarea name="prompt" rows="5" cols="60"></textarea><br>
+    <button type="submit">Kodu Üret</button>
+</form>
+
+<div id="loading" class="loading">
+    <h2>Yükleniyor...</h2>
+</div>
+
+{% if title %}
+<h2>Başlık: {{ title }}</h2>
+{% endif %}
+
+{% if code %}
+<h3>Üretilen Kod:</h3>
+<pre><code>{{ code }}</code></pre>
+<button onclick="copyCode()">Kodu Kopyala</button>
+{% endif %}
+
+<script>
+    function copyCode() {
+        var code = document.querySelector("pre code").innerText;
+        navigator.clipboard.writeText(code).then(function() {
+            alert("Kod kopyalandı!");
+        }, function() {
+            alert("Kod kopyalanamadı!");
+        });
+    }
+</script>
+
+</body>
+</html>

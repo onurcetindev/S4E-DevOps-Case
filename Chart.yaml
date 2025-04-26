@@ -1,0 +1,6 @@
+apiVersion: v2
+name: kod-uretici
+description: Flask tabanlı bir AI kod üretici uygulaması
+type: application
+version: 0.1.0
+appVersion: "1.0.0"
